@@ -1,0 +1,22 @@
+<h1>Update Temperature</h1>
+
+<div class="row">
+
+  <div class="row">
+    <div class="col-md">
+
+      <div class="alert alert-success" role="alert" *ngIf="successRequest">
+        Temperature updated successfully.
+        <a type="button" class="btn btn-link" href="temperatures/{{countryName}}/{{countryID}}/{{weatherForecast.id}}">Back</a>
+      </div>
+
+      <form [formGroup]="temperatureUpdateForm" (ngSubmit)="onSubmit()">
+
+        <label for="temperature-c">Temperature (ºC): </label>
+        <input id="temperatureC" type="text" formControlName="temperatureC">
+
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

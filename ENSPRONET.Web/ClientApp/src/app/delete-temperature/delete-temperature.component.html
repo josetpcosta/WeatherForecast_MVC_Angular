@@ -1,0 +1,17 @@
+<h1>Delete temperature</h1>
+
+<div class="alert alert-success" role="alert" *ngIf="successRequest">
+  Entry deleted successfully!
+  <a type="button" class="btn btn-link" href="fetch-data/{{countryName}}/{{countryID}}">Back</a>
+</div>
+
+<div *ngIf="!successRequest">
+<p>Are you sure you want to delete this weather forecast entry?</p>
+
+<a type="button" class="btn btn-success" (click) = "onClickDelete(weatherForecast.id)">Confirm</a>
+
+<a type="button" class="btn btn-danger col-md" style="margin: 5px;" href="temperatures/{{countryName}}/{{countryID}}/{{weatherForecast.id}}">Cancel</a>
+</div>
+
+
+<!-- mostrar caixa dialogo extra para quando nao existem mais forecasts para um dado pais -->

@@ -1,0 +1,29 @@
+<div class="alert alert-success" role="alert" *ngIf="successRequest">
+  Country updated successfully!
+  <a type="button" class="btn btn-link" [routerLink]="['/countries']">Back</a>
+</div>
+
+  <form class="row" [formGroup]="countryUpdateForm" (ngSubmit)="onSubmit()">
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Country Name*" formControlName="countryName">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Alpha 2code*" formControlName="alpha2Code">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Alpha 3code*" formControlName="alpha3Code">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="number" placeholder="Numeric code*" formControlName="numericCode">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="SubDivision Code" formControlName="SubDivisionCode">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Internet Domain" formControlName="InternetDomain">
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary mb-2" type="submit" style="margin-right: 10px; margin-top: 10px;">Update</button>
+      <a class="btn btn-secondary mb-2" style="margin: 10px;" [routerLink]="['/countries']" >Cancel</a> 
+    </div>
+  </form>

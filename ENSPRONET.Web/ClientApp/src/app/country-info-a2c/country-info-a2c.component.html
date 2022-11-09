@@ -1,0 +1,56 @@
+<p *ngIf="!country.alpha2Code"><em>Loading...</em></p>
+
+<h1 *ngIf="country.alpha2Code">{{ country.countryName }} - Country Info</h1>
+
+<div class="row" *ngIf="country.alpha2Code">
+  <div class="col-md">
+    <p id="country-name">
+      <label class="fw-bold" for="country-name">Country name:</label>
+      <span> {{ country.countryName }}</span>
+    </p>
+
+    <p id="alpha2code">
+      <label class="fw-bold" for="alpha2code">Alpha 2 Code:</label>
+      <span> {{ country.alpha2Code }}</span>
+    </p>
+
+    <p id="alpha3code">
+      <label class="fw-bold" for="alpha3code">Alpha 3 Code:</label>
+      <span> {{ country.alpha3Code }}</span>
+    </p>
+
+    <p id="numeric-code">
+      <label class="fw-bold" for="numeric-code">Numeric Code:</label>
+      <span> {{ country.numericCode }}</span>
+    </p>
+
+    <p id="subdivision-code">
+      <label class="fw-bold" for="subdivision-code">SubDivision Code:</label>
+      <span> {{ country.subDivisionCode }}</span>
+    </p>
+
+    <p id="internet-domain">
+      <label class="fw-bold" for="internet-domain">Internet Domain:</label>
+      <span> {{ country.internetDomain }}</span>
+    </p>
+  
+    <a type="button" class="btn btn-dark col-md" style="margin: 5px;" [routerLink]="['/fetch-data',country.countryName, country.id]">
+      <div class="button_icon_proj">
+        <img src="../assets/images_proj/temp_icon_br.png/" alt="Search">
+      </div>
+    </a>
+
+    <a type="button" class="btn btn-primary col-md" style="margin: 5px;" [routerLink]="['/update-country',country.alpha2Code]">
+      <div class="button_icon_proj">
+        <img src="../assets/images_proj/update_icon_br.png/" alt="Search">
+      </div>
+    </a>
+
+    <a type="button" class="btn btn-danger col-md" style="margin: 5px;" [routerLink]="['/delete-country',country.alpha2Code]">
+      <div class="button_icon_proj">
+        <img src="../assets/images_proj/delete_icon_br.png/" alt="Search">
+      </div>
+    </a>
+
+  </div>
+</div>

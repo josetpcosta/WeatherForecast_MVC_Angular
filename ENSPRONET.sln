@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSPRONET.Web", "ENSPRONET.Web\ENSPRONET.Web.csproj", "{1DBF65C2-E6D7-4EFD-9E20-57F95C7AE37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSPRONET.Services", "ENSPRONET.Services\ENSPRONET.Services.csproj", "{56CF2295-4C9F-4BA1-9254-6828CECC5336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSPRONET.Domains", "ENSPRONET.Domains\ENSPRONET.Domains.csproj", "{764F3BDD-6E3F-463F-B86C-8B50E4DED063}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DBF65C2-E6D7-4EFD-9E20-57F95C7AE37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBF65C2-E6D7-4EFD-9E20-57F95C7AE37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBF65C2-E6D7-4EFD-9E20-57F95C7AE37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBF65C2-E6D7-4EFD-9E20-57F95C7AE37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CF2295-4C9F-4BA1-9254-6828CECC5336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CF2295-4C9F-4BA1-9254-6828CECC5336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CF2295-4C9F-4BA1-9254-6828CECC5336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CF2295-4C9F-4BA1-9254-6828CECC5336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764F3BDD-6E3F-463F-B86C-8B50E4DED063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764F3BDD-6E3F-463F-B86C-8B50E4DED063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764F3BDD-6E3F-463F-B86C-8B50E4DED063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764F3BDD-6E3F-463F-B86C-8B50E4DED063}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

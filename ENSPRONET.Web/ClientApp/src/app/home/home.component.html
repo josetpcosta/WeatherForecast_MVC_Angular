@@ -1,0 +1,33 @@
+<div class="logo_big_home_proj">
+  <img src="../assets/images_proj/iome_logo.png/" alt="Logo">
+</div>
+
+<div class="logo_name_home_proj">
+  <img src="../assets/images_proj/iome_name.png/" alt="Logo">
+</div>
+
+<div class="div_big_proj">
+  <div class="div_class_proj">
+      
+  
+    <div class="input-group mb-1 input_home_proj">
+      
+    </div>
+  </div>
+
+</div >
+<form [formGroup]="countrySearchForm" (ngSubmit)="onSubmit()">
+  <div class="div_home_input_proj_2">
+    <div class="col-4 div_home_input_proj">
+
+      <input type="search" id="alpha2code" class="form-control" formControlName="alpha2code" placeholder="Search Country by alpha2code" />
+      <button type="submit" class="btn btn-primary">
+
+        <div class="button_icon_proj">
+          <img src="../assets/images_proj/search_icon_br.png/" alt="Search">
+        </div>
+      </button>
+    </div>
+  </div>
+</form>
+

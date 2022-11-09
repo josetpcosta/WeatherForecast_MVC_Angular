@@ -1,0 +1,55 @@
+<h1 id="tableLabel">Weather forecast - {{countryName}}</h1>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Temp. (C)</th>
+      <th>Temp. (F)</th>
+      <th>Summary</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.date }}</td>
+      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.temperatureF }}</td>
+      <td>{{ forecast.summary }}</td>
+      <td><a class="btn btn-primary" href="temperatures/{{countryName}}/{{countryID}}/{{forecast.id}}" role="button">See details</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary btn-sm" (click)="showForm = true">Insert a weatherforecast!</button>
+
+<div class="row" *ngIf="showForm">
+  <div class="row col-md">
+    <div >
+      <div class="row col-md">
+        
+          <form [formGroup]="forecastInsertForm" (ngSubmit)="onSubmit()">
+
+            <label for="date">Date: </label>
+            <input id="date" type="datetime-local" formControlName="date">
+
+            <label for="temperatureC">Temperature (Cº): </label>
+            <input id="temperatureC" type="text" formControlName="temperatureC">
+
+            <label for="summary">Summary: </label>
+            <input id="summary" type="text" formControlName="summary">
+
+            <input type="hidden" id="country" formControlName="countryID">
+
+            <button type="submit">Insert</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-success" role="alert" *ngIf="successPost">
+  Temperatura inserida com sucesso!
+</div>

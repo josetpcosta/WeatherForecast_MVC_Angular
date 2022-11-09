@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"); */
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+table{
+  overflow-x: scroll;
+}
+
+.div_class_proj{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div_big_proj{
+  display: flex;
+  justify-content: center;
+}
+
+.input_home_proj{
+  display:flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.logo_icon_proj img{
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+.logo_big_home_proj{
+  display: flex;
+  justify-content: center;
+}
+
+.logo_big_home_proj img{
+  margin-top: 100px;
+  width: 45%;
+}
+
+.text-header-proj{
+  text-align: center;
+}
+
+.div_home_input_proj{
+  display: flex;
+  justify-content: center;
+}
+
+.div_home_input_proj_2{
+  display: flex;
+  justify-content: center;
+}
+
+.button_icon_proj img{
+  width: 25px;
+}
+
+.logo_name_home_proj{
+  display: flex;
+  justify-content: center;
+}
+
+.logo_name_home_proj img{
+  margin-top: 10px;
+  width: 45%;
+}

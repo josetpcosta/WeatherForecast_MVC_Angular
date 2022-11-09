@@ -1,0 +1,32 @@
+<h1>Temperature by ID</h1>
+
+<p *ngIf="!weatherForecast"><em>Loading...</em></p>
+
+<div class="row" *ngIf="weatherForecast.id">
+  <div class="col-md">
+    <label for="weatherforecast-date">Date:</label>
+    <p id="weatherforecast-date">{{ weatherForecast.date }}</p>
+
+    <label for="weatherforecast-temperatureC">Temperature C:</label>
+    <p id="weatherforecast-temperatureC">{{ weatherForecast.temperatureC }}</p>
+
+    <label for="weatherforecast-temperatureF">Temperature F:</label>
+    <p id="weatherforecast-temperatureF">{{ weatherForecast.temperatureF }}</p>
+
+    <label for="weatherforecast-summary">Summary:</label>
+    <p id="weatherforecast-summary">{{ weatherForecast.summary }}</p>
+
+  </div>
+</div>
+
+<a type="button" class="btn btn-primary col-md" style="margin: 5px;" href="update-temperature/{{countryName}}/{{countryID}}/{{weatherForecast.id}}">
+  <div class="button_icon_proj">
+    <img src="../assets/images_proj/update_icon_br.png/" alt="Search">
+  </div>
+</a>
+
+<a type="button" class="btn btn-danger col-md" style="margin: 5px;" href="delete-temperature/{{countryName}}/{{countryID}}/{{weatherForecast.id}}">
+  <div class="button_icon_proj">
+    <img src="../assets/images_proj/delete_icon_br.png/" alt="Search">
+  </div>
+</a>

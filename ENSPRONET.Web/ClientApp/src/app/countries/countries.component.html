@@ -1,0 +1,88 @@
+<h1>List of all countries</h1>
+
+<button *ngIf="showInsertButton" type="button" class="btn btn-primary btn-sm" (click)="showForm = true; showInsertButton = false; successPost = false">Insert a country!</button>
+
+<div *ngIf="showForm">
+  <form class="row" [formGroup]="countryInsertForm" (ngSubmit)="onSubmit()">
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Country Name*" formControlName="countryName">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Alpha 2code*" formControlName="alpha2Code">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Alpha 3code*" formControlName="alpha3Code">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="number" placeholder="Numeric code*" formControlName="numericCode">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="SubDivision Code" formControlName="SubDivisionCode">
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Internet Domain" formControlName="InternetDomain">
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary mb-2" type="submit" style="margin-right: 10px; margin-top: 10px;">Insert</button>
+      <button class="btn btn-secondary mb-2" style="margin: 10px;"
+        (click)="showForm = false; showInsertButton = true; showError = false">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div class="alert alert-success" role="alert" *ngIf="successPost">
+  País inserido com sucesso!
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="showError">
+  Ops, something went wrong!
+</div>
+
+<p class="mt-2" *ngIf="!showTable"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="showTable">
+  <thead>
+    <tr>
+      <th>Country Name</th>
+      <th>Alpha2 Code</th>
+      <th>Alpha3 Code</th>
+      <th>Numeric Code</th>
+      <th>SubDivision Code</th>
+      <th>Internet Domain</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries">
+      <td>{{ country.countryName }}</td>
+      <td>{{ country.alpha2Code }}</td>
+      <td>{{ country.alpha3Code }}</td>
+      <td>{{ country.numericCode }}</td>
+      <td>{{ country.subDivisionCode }}</td>
+      <td>{{ country.internetDomain }}</td>
+      <td>
+        <a class="btn btn-dark btn-sm" style="margin: 5px;" [routerLink]="['/fetch-data',country.countryName, country.id]" role="button">
+          <div class="button_icon_proj">
+            <img src="../assets/images_proj/temp_icon_br.png/" alt="Search">
+          </div>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-sm" style="margin: 5px;" [routerLink]="['/update-country',country.alpha2Code]" role="button">
+          <div class="button_icon_proj">
+            <img src="../assets/images_proj/update_icon_br.png/" alt="Search">
+          </div>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-danger btn-sm" style="margin: 5px;" [routerLink]="['/delete-country',country.alpha2Code]" role="button">
+          <div class="button_icon_proj">
+            <img src="../assets/images_proj/delete_icon_br.png/" alt="Search">
+          </div>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
